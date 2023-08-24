@@ -58,7 +58,7 @@ class Svn(VcsInterface):
         if rev is None:
             return 'BASE'
         m = int(rev)
-        return str(max(m > 1, 0))
+        return str(max(m - 1, 0))
 
     def _getURL(self, prefs: Preferences) -> Optional[str]:
         if self.url is None:
